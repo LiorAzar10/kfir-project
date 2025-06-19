@@ -1,41 +1,49 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BASE BODY */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #f9fafb, #e0f7fa);
+  background: linear-gradient(to right, #f0f9ff, #e0f7fa);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+  color: #1f2937;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h1 {
   font-size: 3rem;
   color: #0f172a;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: #475569;
-  margin-bottom: 25px;
 }
 
+/* SCOREBOARD */
 .scoreboard {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 20px 0 30px 0;
   background-color: #ffffffcc;
   padding: 10px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 #resetBtn {
@@ -55,13 +63,20 @@ h1 {
   transform: scale(1.05);
 }
 
+#resetBtn:focus {
+  outline: 2px solid #1d4ed8;
+}
+
+/* GAME BOARD */
 .game-board {
   display: grid;
   grid-template-columns: repeat(4, 100px);
-  grid-gap: 18px;
+  grid-gap: 16px;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
+/* CARDS */
 .card {
   width: 100px;
   height: 100px;
@@ -93,6 +108,7 @@ h1 {
   backface-visibility: hidden;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
   user-select: none;
+  transition: transform 0.3s;
 }
 
 .card-front {
@@ -104,4 +120,44 @@ h1 {
   background: linear-gradient(to top left, #10b981, #34d399);
   color: white;
   transform: rotateY(180deg);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .game-board {
+    grid-template-columns: repeat(2, 80px);
+    grid-gap: 12px;
+  }
+
+  .card {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    text-align: center;
+  }
 }
