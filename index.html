@@ -8,17 +8,25 @@
 </head>
 <body>
 
-  <h1>Memory Game</h1>
-  <p class="subtitle">Let's test your memory Kfir 🦁</p>
+  <header>
+    <h1>Memory Game</h1>
+    <p class="subtitle">Let's test your memory, Kfir 🦁</p>
+  </header>
 
-  <div class="scoreboard">
-    <p>Moves: <span id="moves">0</span></p>
-    <button id="resetBtn">🔄 Reset</button>
-  </div>
+  <main>
+    <section class="scoreboard" aria-label="Game controls">
+      <p>Moves: <span id="moves">0</span></p>
+      <button id="resetBtn" aria-label="Reset game">🔄 Reset</button>
+    </section>
 
-  <div class="game-board" id="gameBoard">
-    <!-- Cards will be inserted here dynamically -->
-  </div>
+    <section class="game-board" id="gameBoard" aria-label="Memory game board">
+      <!-- Cards will be inserted here dynamically -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Memory Game by Fefe & Lior</p>
+  </footer>
 
   <script type="module" src="main.js"></script>
 </body>
