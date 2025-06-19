@@ -19,9 +19,6 @@ Flip cards, find matching emoji pairs, and test your memory!
 - Emoji-based memory matching game
 - Move counter and reset button
 - Random card shuffle each round
-- Smooth flip animations
-- Click-lock to prevent fast-click bugs
-
 ---
 
 ## 📁 Files
